@@ -34,9 +34,6 @@ h2 = 1-h1
 for a in [0.8]:
     for b in [1]:
         temp = []
-        #i am unsure if i'm scaling these correctly. larger values should indicate a higher probability P(H2|D) -> more "unfair"
-        #however, for the third one, the rating should be close to 7 and yet it is closer to 1, which seems strange.
-        #i don't see anything glaringly wrong with my math/code, though, so i just left it as is.
         temp.append(7-logTransform(3, 2, a, b, h1, h2)*7)
         temp.append(7-logTransform(1, 4, a, b, h1, h2)*7)
         temp.append(7-logTransform(5, 0, a, b, h1, h2)*7)
